@@ -15,4 +15,10 @@ public class ProductService {
     public List<ProductModel> getProducts() {
         return ProductList;
     }
+
+    public ProductModel getProductByID(int ID) {
+        return ProductList.stream()
+                .filter(p -> p.getID() == ID)
+                .findFirst().orElse(new ProductModel(-1, "Item Not Found", 0));
+    }
 }
