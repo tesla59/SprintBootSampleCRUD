@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Home {
+public class HomeController {
     @RequestMapping("/")
     public String home() {
         return "<h1>Hi, this is my first spring boot project</h1>";
