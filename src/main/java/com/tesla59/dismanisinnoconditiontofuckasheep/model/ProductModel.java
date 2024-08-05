@@ -1,13 +1,24 @@
 package com.tesla59.dismanisinnoconditiontofuckasheep.model;
 
+import org.springframework.stereotype.Component;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Component
+@Entity
 public class ProductModel {
-    private int ID;
+    @Id
+    private Integer ID;
     private String Name;
-    private int price;
+    private Integer price;
+
+    public ProductModel() {
+    }
 
     public ProductModel(int iD, String name, int price) {
-        ID = iD;
-        Name = name;
+        this.ID = iD;
+        this.Name = name;
         this.price = price;
     }
 
